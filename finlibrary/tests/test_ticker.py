@@ -14,9 +14,6 @@ def test_ticker_dependent_object_registers_as_a_dependency_of_ticker():
     ticker_dependent = MockTickerDependent(ticker)
     assert ticker_dependent == ticker.dependencies[0]
 
-
-
-
 def test_tick_ticks_ticker_dependent_objects():
     ticker = Ticker()
     ticker_dependent = MockTickerDependent(ticker)
