@@ -1,7 +1,2 @@
-from .random_walk import RandomWalk
-
-class BinomialTree(RandomWalk):
-    def __init__(self, ticker, initial_value=1, probability_up=0.5):
-        super().__init__(ticker, probability_up)
-        self.initial_value = initial_value
-        self.probability_up = probability_up
+def binomial_tree_values(initial_value, up_factor, down_factor, period):
+    return [(up_factor ** k) * (down_factor ** (period - k)) for k in range(period+1)]

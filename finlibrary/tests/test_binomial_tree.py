@@ -1,10 +1,9 @@
-from finlibrary.src.ticker import Ticker
-from finlibrary.src.binomial_tree import BinomialTree
+from finlibrary.src.binomial_tree import binomial_tree_values
 
-def test_binomial_tree():
-    ticker = Ticker()
-    probability_up = 0.5
+def test_binomial_tree_values():
     initial_value = 1
-    tree = BinomialTree(ticker, initial_value, probability_up)
-    assert tree.initial_value == 1
-    assert tree.probability_up == 0.5
+    up_factor = 2
+    down_factor = 0.5
+    possible_values = binomial_tree_values(initial_value, up_factor, down_factor, 2)
+    expected_values = [0.25, 1, 4]
+    assert possible_values == expected_values
