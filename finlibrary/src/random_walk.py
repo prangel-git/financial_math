@@ -8,6 +8,6 @@ class RandomWalk(TickerDependent):
         self.probability_up = probability_up
     
     def update(self):
-        step = 2 * (random() < 0.5) - 1
+        step = 2 * (random() < self.probability_up) - 1
         self.position += step
         

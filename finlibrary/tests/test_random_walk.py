@@ -12,3 +12,15 @@ def test_random_walk_evolution():
     walk = RandomWalk(ticker)
     walk.update()
     assert walk.position == 1 or walk.position == -1
+
+def test_random_walk_up_goes_up():
+    ticker = Ticker()
+    walk = RandomWalk(ticker, 1)
+    walk.update()
+    assert walk.position == 1
+
+def test_random_walk_down_goes_down():
+    ticker = Ticker()
+    walk = RandomWalk(ticker, 0)
+    walk.update()
+    assert walk.position == -1
