@@ -17,7 +17,7 @@ class TickerDependent:
     def __init__(self, ticker):
         ticker.register(self)
     
-    def update():
+    def update(self):
         pass
 
 
