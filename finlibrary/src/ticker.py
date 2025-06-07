@@ -18,7 +18,7 @@ class TickerDependent:
         ticker.register(self)
     
     def update(self):
-        pass
+        raise NotImplementedError("Please Implement this method")
 
 
 class MockTickerDependent(TickerDependent):
