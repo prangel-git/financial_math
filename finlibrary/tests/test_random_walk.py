@@ -6,3 +6,9 @@ def test_random_walk_initialization():
     walk = RandomWalk(ticker)
     assert walk.position == 0 
     assert walk.probability == 0.5
+
+def test_random_walk_evolution():
+    ticker = Ticker()
+    walk = RandomWalk(ticker)
+    walk.update()
+    assert walk.position == 1 or walk.position == -1
