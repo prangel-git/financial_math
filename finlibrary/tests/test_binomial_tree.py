@@ -1,7 +1,7 @@
 
 import pytest
 
-from finlibrary.src.binomial_tree import one_period_binomial_pricing, multiperiod_binomial_pricing, binomial_tree_values
+from finlibrary.src.binomial_tree import one_period_binomial_pricing, multiperiod_binomial_pricing
 
 def test_one_period_binomial_pricing():
     stock_initial_price = 4
