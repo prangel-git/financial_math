@@ -6,7 +6,6 @@ def test_one_period_binomial_pricing():
     up_factor = 2
     down_factor = 1/2
     bond_return = 5/4
-    derivative_expiry = 1
     strike = 5
     derivative_payoff = lambda s_N: max(s_N-strike, 0)
 
@@ -15,11 +14,10 @@ def test_one_period_binomial_pricing():
         up_factor,
         down_factor,
         bond_return,
-        derivative_expiry,
         derivative_payoff
     )
 
     assert derivative_price == 1.2
     assert stock_allocation == 1/2
-    assert bond_allocation == 0.8
+    assert bond_allocation == -0.8
 
