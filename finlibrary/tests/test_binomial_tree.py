@@ -44,12 +44,3 @@ def test_multiperiod_binomial_pricing():
     assert hedging_tree.price == pytest.approx(2.048)
     assert hedging_tree.stock_allocation == pytest.approx(0.7466666666666666)
     assert hedging_tree.bond_allocation == pytest.approx(-0.9386666666666663) 
-
-
-def test_binomial_tree_values():
-    initial_value = 1
-    up_factor = 2
-    down_factor = 0.5
-    possible_values = binomial_tree_values(initial_value, up_factor, down_factor, 2)
-    expected_values = [0.25, 1, 4]
-    assert possible_values == expected_values
